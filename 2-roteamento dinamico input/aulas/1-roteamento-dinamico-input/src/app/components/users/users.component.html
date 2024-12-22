@@ -1,1 +1,7 @@
-<p>users works!</p>
+@for (user of usersList$ | async; track user) {
+    <div style="cursor: pointer;" [routerLink]="[ '/posts/', user.id]">
+        <div>{{ user.id }}</div>
+        <div>{{ user.name }}</div>
+        <hr>
+    </div>
+}

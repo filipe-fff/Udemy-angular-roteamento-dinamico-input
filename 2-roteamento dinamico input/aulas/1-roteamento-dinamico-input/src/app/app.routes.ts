@@ -10,10 +10,16 @@ export const routes: Routes = [
     },
     {
         path: "users",
-        component: UsersComponent
+        component: UsersComponent,
+        children: [
+            {
+                path: "posts/:userId",
+                component: PostsComponent
+            }
+        ]
     },
-    {
-        path: "posts/:userId",
-        component: PostsComponent
-    }
+    // {
+    //     path: "posts/:userId",
+    //     component: PostsComponent
+    // }
 ];

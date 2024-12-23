@@ -3,11 +3,12 @@ import { Observable, of } from 'rxjs';
 import { UsersPostList } from '../../types/users-post-list';
 import { UserPost } from '../../services/user-post.service';
 import { AsyncPipe } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [ AsyncPipe ],
+  imports: [ AsyncPipe, RouterOutlet, RouterLink ],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
 })

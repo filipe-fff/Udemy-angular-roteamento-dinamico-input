@@ -16,15 +16,22 @@ export class PostsComponent implements OnInit {
 
   postsList$: Observable<UsersPostList> = of([]);
 
+  private _userId: string = "";
+  
   @Input() set userId(value: string) {
     console.log("value => ", value);
-    this.postsList$ = this._postsList.getUserPost(this.userId);
+    this._userId = value;
+    this.postsList$ = this._postsList.getUserPost(value);
   };
-  
-  private readonly _postsList = inject(UserPost);
 
+  private readonly _postsList = inject(UserPost);
+  
   ngOnInit() {
-      console.log("ngOnInit => ", this.userId);
+      console.log("ngOnInit => ", this._userId);
       // this.postsList$ = this._postsList.getUserPost(this.userId);
+  }
+
+  getUserById() {
+    console.log(this._userId);
   }
 }

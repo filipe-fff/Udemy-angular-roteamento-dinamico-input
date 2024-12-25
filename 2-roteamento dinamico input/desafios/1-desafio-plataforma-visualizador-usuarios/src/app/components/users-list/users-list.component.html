@@ -1,0 +1,6 @@
+<h1>Lista de Usuários:</h1>
+
+<div class="list" *ngFor="let user of usersList" [routerLink]="['/area']" [queryParams]="{ 'userId': user.id }">
+    <div class="list__item">Código: {{ user.id }}</div>
+    <div class="list__item">Nome: {{ user.name }}</div>
+</div>

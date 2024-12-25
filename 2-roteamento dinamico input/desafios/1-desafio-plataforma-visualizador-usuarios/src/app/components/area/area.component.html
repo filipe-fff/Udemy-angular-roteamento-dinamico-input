@@ -1,0 +1,13 @@
+<div class="list">
+    <div class="list__item">Código: {{ user.id }}</div>
+    <div class="list__item">Nome: {{ user.name }}</div>
+</div>
+
+<div class="menu">
+    <a class="menu__item" routerLink="/">Usuários</a>
+    <a class="menu__item" routerLink="todos" [queryParams]="{ 'userId': user.id}">Todos</a>
+    <a class="menu__item" routerLink="albums" [queryParams]="{ 'userId': user.id }">Albums</a>
+    <a class="menu__item" routerLink="posts" [queryParams]="{ 'userId': user.id}">Posts</a>
+</div>
+
+<router-outlet></router-outlet>

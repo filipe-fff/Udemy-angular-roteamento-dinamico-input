@@ -1,0 +1,11 @@
+.menu {
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu__item {
+        padding: 10px;
+        text-align: center;
+        flex: auto;
+    }
+}

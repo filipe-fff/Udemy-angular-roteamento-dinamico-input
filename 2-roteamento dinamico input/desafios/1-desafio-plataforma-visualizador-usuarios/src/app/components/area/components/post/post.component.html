@@ -1,0 +1,10 @@
+<h1>Post:</h1>
+
+<div class="lista">
+    <div class="lista__item">Título: {{ post.title }}</div>
+    <div class="lista__item">Conteúdo: {{ post.body }}</div>
+</div>
+
+<button routerLink="comments" [queryParams]="{ postId: post.id }"> comentários </button>
+
+<router-outlet></router-outlet>

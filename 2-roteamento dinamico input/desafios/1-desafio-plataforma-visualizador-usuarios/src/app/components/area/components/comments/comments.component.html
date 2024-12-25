@@ -1,0 +1,6 @@
+<h1>Comentários:</h1>
+
+<div  *ngFor="let comment of commentsList" class="list">
+    <div class="list__item">Nome: {{ comment.name }}</div>
+    <div class="list__item">Conteúdo: {{ comment.body }}</div>
+</div>

@@ -1,0 +1,9 @@
+<h1>Posts:</h1>
+
+<div 
+    *ngFor="let post of postsList"
+    class="list"
+    [routerLink]="'../post/' + post.id">
+    <div class="list__item">Título: {{ post.title }}</div>
+    <div class="list__item">Conteúdo: {{ post.body }}</div>
+</div>

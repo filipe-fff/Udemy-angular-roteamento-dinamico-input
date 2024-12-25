@@ -6,10 +6,10 @@ import { CommentsList } from "../types/comments-list";
 @Injectable({
     providedIn: "root",
 })
-export class PostService {
+export class CommentService {
     private readonly _http = inject(HttpClient);
 
-    getPostsListByPostId(postId: string): Observable<CommentsList> {
+    getCommentsListByPostId( postId: string ): Observable<CommentsList> {
         return this._http.get<CommentsList>("https://jsonplaceholder.typicode.com/comments?postId=" + postId);
     }
 }

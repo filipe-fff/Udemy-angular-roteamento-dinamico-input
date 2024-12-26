@@ -8,6 +8,4 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = '1-desafio-plataforma-visualizador-usuarios-resolucao';
-}
+export class AppComponent { }

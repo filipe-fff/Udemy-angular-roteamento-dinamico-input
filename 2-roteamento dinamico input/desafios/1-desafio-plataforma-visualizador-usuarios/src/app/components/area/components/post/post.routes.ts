@@ -8,6 +8,7 @@ export const PostRoutes: Routes = [
         children: [
             {
                 path: "comments",
+                title: "Comentários",
                 component: CommentsComponent
             }
         ]

@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { UsersList } from "../types/users-list";
+import { UsersListResponse } from "../types/users-list-response";
 
 @Injectable({
     providedIn: "root",
@@ -9,7 +9,7 @@ import { UsersList } from "../types/users-list";
 export class UsersListService {
     private readonly _http = inject(HttpClient);
 
-    getUsers(): Observable<UsersList> {
-        return this._http.get<UsersList>("https://jsonplaceholder.typicode.com/users");
+    getUsers(): Observable<UsersListResponse> {
+        return this._http.get<UsersListResponse>("https://jsonplaceholder.typicode.com/users");
     }
 }

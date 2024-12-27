@@ -18,10 +18,10 @@ export class TodosComponent implements OnInit {
   todosList$: Observable<TodosListResponse> = of([]);
 
   private readonly _todosListService = inject(TodosListService);
-  private readonly _activatedRouter = inject(ActivatedRoute);
+  private readonly _activatedRoute = inject(ActivatedRoute);
 
-  ngOnInit(): void {
-      this._activatedRouter.parent?.params.subscribe(
+  ngOnInit() {
+      this._activatedRoute.parent?.params.subscribe(
         (params) => this.todosList$ = this._todosListService.getUserTodos(params["userId"])
       );
   }

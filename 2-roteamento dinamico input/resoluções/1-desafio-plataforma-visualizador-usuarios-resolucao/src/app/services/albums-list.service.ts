@@ -6,7 +6,7 @@ import { AlbumsListResponse } from "../types/albums-list-response";
 @Injectable({
     providedIn: "root",
 })
-export class AlbumsService {
+export class AlbumsListService {
     private readonly _http = inject(HttpClient);
 
     getUserAlbums(userId: string): Observable<AlbumsListResponse> {

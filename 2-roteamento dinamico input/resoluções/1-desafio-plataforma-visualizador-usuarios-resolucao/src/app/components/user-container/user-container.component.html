@@ -1,1 +1,6 @@
-<p>user-container works!</p>
+@if(user$ | async; as user) {
+    <div style="padding: 10px;">
+        <div>Código: {{ user.id }}</div>
+        <div>Nome: {{ user.name }}</div>
+    </div>
+}

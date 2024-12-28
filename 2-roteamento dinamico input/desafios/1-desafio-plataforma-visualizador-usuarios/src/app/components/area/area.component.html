@@ -5,9 +5,9 @@
 
 <div class="menu">
     <a class="menu__item" routerLink="/">Usuários</a>
-    <a class="menu__item" routerLink="todos" [queryParams]="{ 'userId': user.id}">Todos</a>
-    <a class="menu__item" routerLink="albums" [queryParams]="{ 'userId': user.id }">Albums</a>
-    <a class="menu__item" routerLink="posts" [queryParams]="{ 'userId': user.id}">Posts</a>
+    <a class="menu__item" routerLink="todos" [queryParams]="{ 'userId': user.id}" routerLinkActive="menu__item--selected">Todos</a>
+    <a class="menu__item" routerLink="albums" [queryParams]="{ 'userId': user.id }" routerLinkActive="menu__item--selected">Albums</a>
+    <a class="menu__item" routerLink="posts" [queryParams]="{ 'userId': user.id}" routerLinkActive="menu__item--selected">Posts</a>
 </div>
 
 <router-outlet></router-outlet>

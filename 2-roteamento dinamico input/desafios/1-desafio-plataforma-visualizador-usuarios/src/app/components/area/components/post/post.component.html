@@ -3,6 +3,7 @@
 <div class="lista">
     <div class="lista__item">Título: {{ post.title }}</div>
     <div class="lista__item">Conteúdo: {{ post.body }}</div>
+    <div class="lista__item">Código: {{ post.id }}</div>
 </div>
 
 <button routerLink="comments" [queryParams]="{ postId: post.id }"> comentários </button>

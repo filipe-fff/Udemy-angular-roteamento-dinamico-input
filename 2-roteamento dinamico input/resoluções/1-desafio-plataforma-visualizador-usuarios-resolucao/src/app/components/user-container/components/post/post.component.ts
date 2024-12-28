@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { PostsListService } from '../../../../services/posts-list.service';
+import { Observable, of } from 'rxjs';
+import { IPost } from '../../../../interfaces/post.interface';
+import { AsyncPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [],
+  imports: [
+    AsyncPipe,
+    RouterLink
+  ],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss'
 })
 export class PostComponent {
+  post$: Observable<IPost> = of({} as IPost);
 
+  private readonly _postsListService = inject(PostsListService);
+
+  @Input() set postId(value: string) {
+    this.post$ = this._postsListService.getPost(value);
+  }
 }

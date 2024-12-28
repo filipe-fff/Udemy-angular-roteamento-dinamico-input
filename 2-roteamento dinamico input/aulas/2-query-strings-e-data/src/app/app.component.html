@@ -2,8 +2,10 @@
 
 <button routerLink="/comp1" [queryParams]="{ name: 'Laura', age: '23', country: 'Brasil' }">Redirecionar Laura</button>
 
-<button routerLink="/comp1">Redirecionar Sem Preservar</button>
+<button routerLink="/comp1" [queryParams]="{ status: 'ativo' }">Redirecionar Sem Preservar</button>
 
 <button routerLink="/comp2" queryParamsHandling="preserve">Redirecionar Preservando</button>
+<button routerLink="/comp2" queryParamsHandling="merge"  [queryParams]="{ status: 'ativo' }">Redirecionar Mergeando</button>
+
 
 <router-outlet></router-outlet>
